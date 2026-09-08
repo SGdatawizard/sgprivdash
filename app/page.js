@@ -1,4 +1,12 @@
-import { sgData, sgAnthology, sgAuctions, sgConsignments } from "./images";
+import {
+  sgData,
+  sgAnthology,
+  sgAuctions,
+  sgConsignments,
+  sgHeirloom,
+  sgReader,
+  sgMarketingCalendar,
+} from "./images";
 
 const tools = [
   {
@@ -28,6 +36,27 @@ const tools = [
     image: sgConsignments,
     description:
       "Track consignments from intake to completion — receipts, vendors and deadlines all in one place.",
+  },
+  {
+    title: "SG Heirloom",
+    href: "https://vercel.com/sgb2/heirloom/deployments",
+    image: sgHeirloom,
+    description:
+      "A private curation service for the finest stamps, coins and cards, proven by the record.",
+  },
+  {
+    title: "SG Reader",
+    href: "https://sgreader-tszy-5dbdo0eni-sgb2.vercel.app/",
+    image: sgReader,
+    description:
+      "Browse our auction catalogues as digital, page-turning books — search or jump straight to a lot.",
+  },
+  {
+    title: "SG Marketing Calendar",
+    href: "https://sg-markcal.vercel.app/",
+    image: sgMarketingCalendar,
+    description:
+      "Plan and map marketing activity across every channel in one shared, drag-and-drop calendar.",
   },
 ];
 
