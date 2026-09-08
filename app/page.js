@@ -9,7 +9,7 @@ import {
 } from "./images";
 import PasswordReveal from "./PasswordReveal";
 
-// ⬇️ Put the real password for each tool in the `password` field below.
+// Login details for each tool. Leave `email`/`password` off for open-access tools.
 const tools = [
   {
     title: "SG Data",
@@ -17,7 +17,7 @@ const tools = [
     image: sgData,
     description:
       "A full catalogue of passed GB items auctioned with Stanley Gibbons.",
-    password: "paste-password-here",
+    password: "Kluivert89!",
   },
   {
     title: "SG Anthology",
@@ -25,7 +25,8 @@ const tools = [
     image: sgAnthology,
     description:
       "A sales tool to help match customers to their categories, and sell more stock.",
-    password: "paste-password-here",
+    email: "hnorris@stanleygibbons.com",
+    password: "Calvinbassey89!",
   },
   {
     title: "SG Auctions",
@@ -33,7 +34,8 @@ const tools = [
     image: sgAuctions,
     description:
       "A full auction stats tracker to map how our auctions are performing.",
-    password: "paste-password-here",
+    email: "hnorris@stanleygibbons.com",
+    password: "Lordofthestamps123!",
   },
   {
     title: "SG Consignments",
@@ -41,15 +43,15 @@ const tools = [
     image: sgConsignments,
     description:
       "Track consignments from intake to completion — receipts, vendors and deadlines all in one place.",
-    password: "paste-password-here",
+    email: "hnorris@stanleygibbons.com",
+    password: "stamps123",
   },
   {
     title: "SG Heirloom",
-    href: "https://vercel.com/sgb2/heirloom/deployments",
+    href: "https://heirloom-rho.vercel.app/",
     image: sgHeirloom,
     description:
       "A private curation service for the finest stamps, coins and cards, proven by the record.",
-    password: "paste-password-here",
   },
   {
     title: "SG Reader",
@@ -57,7 +59,6 @@ const tools = [
     image: sgReader,
     description:
       "Browse our auction catalogues as digital, page-turning books — search or jump straight to a lot.",
-    password: "paste-password-here",
   },
   {
     title: "SG Marketing Calendar",
@@ -65,7 +66,6 @@ const tools = [
     image: sgMarketingCalendar,
     description:
       "Plan and map marketing activity across every channel in one shared, drag-and-drop calendar.",
-    password: "paste-password-here",
   },
 ];
 
@@ -102,7 +102,7 @@ export default function Home() {
                 </div>
                 <p className="desc">{tool.description}</p>
               </a>
-              <PasswordReveal password={tool.password} />
+              <PasswordReveal email={tool.email} password={tool.password} />
             </div>
           </div>
         ))}
