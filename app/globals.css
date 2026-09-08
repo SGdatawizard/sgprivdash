@@ -280,9 +280,10 @@ body {
 
 .pw-label {
   flex: 0 0 auto;
-  width: 4.4em;
+  width: 5.75em;
+  white-space: nowrap;
   font-size: 0.62rem;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--ink-mute);
 }
