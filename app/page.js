@@ -7,9 +7,7 @@ import {
   sgReader,
   sgMarketingCalendar,
 } from "./images";
-import PasswordReveal from "./PasswordReveal";
 
-// Login details for each tool. Leave `email`/`password` off for open-access tools.
 const tools = [
   {
     title: "SG Data",
@@ -17,7 +15,6 @@ const tools = [
     image: sgData,
     description:
       "A full catalogue of passed GB items auctioned with Stanley Gibbons.",
-    password: "Kluivert89!",
   },
   {
     title: "SG Anthology",
@@ -25,8 +22,6 @@ const tools = [
     image: sgAnthology,
     description:
       "A sales tool to help match customers to their categories, and sell more stock.",
-    email: "hnorris@stanleygibbons.com",
-    password: "Calvinbassey89!",
   },
   {
     title: "SG Auctions",
@@ -34,17 +29,13 @@ const tools = [
     image: sgAuctions,
     description:
       "A full auction stats tracker to map how our auctions are performing.",
-    email: "hnorris@stanleygibbons.com",
-    password: "Lordofthestamps123!",
   },
   {
-    title: "SG Postmark",
+    title: "SG Consignments",
     href: "https://consignment-tracker-tan.vercel.app/overview",
     image: sgConsignments,
     description:
       "Track consignments from intake to completion — receipts, vendors and deadlines all in one place.",
-    email: "hnorris@stanleygibbons.com",
-    password: "stamps123",
   },
   {
     title: "SG Heirloom",
@@ -84,27 +75,25 @@ export default function Home() {
 
       <section className="album" aria-label="Tools">
         {tools.map((tool) => (
-          <div key={tool.title} className="card">
+          <a
+            key={tool.title}
+            className="card"
+            href={tool.href}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <div className="card-inner">
-              <a
-                className="card-link"
-                href={tool.href}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <div className="card-head">
-                  <h2 className="card-title">{tool.title}</h2>
-                  <span className="open">Open ↗</span>
-                </div>
-                <div className="shot">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={tool.image} alt={`${tool.title} screenshot`} />
-                </div>
-                <p className="desc">{tool.description}</p>
-              </a>
-              <PasswordReveal email={tool.email} password={tool.password} />
+              <div className="card-head">
+                <h2 className="card-title">{tool.title}</h2>
+                <span className="open">Open ↗</span>
+              </div>
+              <div className="shot">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={tool.image} alt={`${tool.title} screenshot`} />
+              </div>
+              <p className="desc">{tool.description}</p>
             </div>
-          </div>
+          </a>
         ))}
       </section>
     </main>
