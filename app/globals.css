@@ -244,3 +244,94 @@ body {
     animation: none;
   }
 }
+
+/* ---------- Login gate ---------- */
+.login-page {
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  padding: 2rem 1.25rem;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 380px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 2.4rem 2rem 2rem;
+  box-shadow: 0 1px 2px rgba(var(--shadow), 0.06),
+    0 14px 34px rgba(var(--shadow), 0.09);
+  text-align: center;
+}
+
+.login-brand {
+  margin-bottom: 1.4rem;
+}
+
+.login-title {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 1.1;
+  margin: 0 0 0.4rem;
+  color: var(--ink);
+}
+
+.login-sub {
+  margin: 0 0 1.5rem;
+  font-size: 0.9rem;
+  color: var(--ink-mute);
+}
+
+.login-input {
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font: inherit;
+  font-size: 1rem;
+  color: var(--ink);
+  background: #fff;
+}
+
+.login-input:focus {
+  outline: none;
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(176, 138, 52, 0.18);
+}
+
+.login-error {
+  margin: 0.75rem 0 0;
+  font-size: 0.85rem;
+  color: #b3261e;
+}
+
+.login-btn {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 0.72rem 1rem;
+  border: none;
+  border-radius: 8px;
+  background: var(--ink);
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: background-color 0.2s ease, opacity 0.2s ease;
+}
+
+.login-btn:hover {
+  background: #1d3352;
+}
+
+.login-btn:disabled {
+  opacity: 0.65;
+  cursor: default;
+}
+
+.login-btn:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+}
